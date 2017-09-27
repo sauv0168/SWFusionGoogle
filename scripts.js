@@ -1,4 +1,4 @@
-function onEdit(){
+function onEdit() {
     neededFusion();
 }
 
@@ -84,7 +84,7 @@ function neededFusion() {
         all.grimReaperWater = new Monster("Hemos", "Grim Reaper", ATTRIBUTES.WATER);
         all.infernoWind = new Monster("Anduril", "Inferno", ATTRIBUTES.WIND);
         all.impFire = new Monster("Cogma", "Imp", ATTRIBUTES.FIRE);
-        all.serpentFire = new Monster("Fao", "Serpend", ATTRIBUTES.FIRE);
+        all.serpentFire = new Monster("Fao", "Serpent", ATTRIBUTES.FIRE);
         all.martialCatFire = new Monster("Mei", "Martial Cat", ATTRIBUTES.FIRE);
         all.magicalArcherWater = new Monster("Sharron", "Magical Archer", ATTRIBUTES.WATER);
         all.salamanderWind = new Monster("Lukan", "Salamander", ATTRIBUTES.WIND);
@@ -113,6 +113,18 @@ function neededFusion() {
         all.jokerFire = new Monster("Jojo", "Joker", ATTRIBUTES.FIRE, 4);
         all.ninjaWater = new Monster("Susano", "Ninja", ATTRIBUTES.WATER, 4);
         all.martialCatWater = new Monster("Mina", "Martial Cat", ATTRIBUTES.WATER);
+        all.warbearWater = new Monster("Dagora", "Warbear", ATTRIBUTES.WATER);
+        all.fairyWind = new Monster("Aeilene", "Fairy", ATTRIBUTES.WIND);
+        all.mysticWitch = new Monster("Rebecca", "Mystic Witch", ATTRIBUTES.FIRE);
+        all.vagabondFire = new Monster("Kai'en", "Vagabond", ATTRIBUTES.FIRE);
+        all.harpMagicianFire = new Monster("Harmonia", "Harp Magician", ATTRIBUTES.FIRE, 4);
+        all.magicalArcherWind = new Monster("Ardella", "Magical Archer", ATTRIBUTES.WIND);
+        all.elementalFire = new Monster("Bremis", "Elemental", ATTRIBUTES.FIRE);
+        all.martialArtistWater = new Monster("Luan", "Martial Artist", ATTRIBUTES.WATER);
+        all.infernoWater = new Monster("Purian", "Inferno", ATTRIBUTES.WATER);
+        all.samuraiWater = new Monster("Kaz", "Samurai", ATTRIBUTES.WATER, 4);
+        all.cowGirlLight = new Monster("Loren", "Cow Girl", ATTRIBUTES.LIGHT);
+        all.paladinLight = new Monster("Unknown", "Paladin", ATTRIBUTES.LIGHT, 5);
         all.pandaWarriorFire = new Monster("Xiong Fei", "Panda Warrior", ATTRIBUTES.FIRE, 5)
         all.ifritDark = new Monster("Veromos", "Ifrit", ATTRIBUTES.DARK, 5);
         all.valkyrjaWind = new Monster("Katarina", "Valkyrja", ATTRIBUTES.WIND, 5);
@@ -128,6 +140,9 @@ function neededFusion() {
         all.ninjaWater.addFusions([all.inugamiWater, all.griffonWater, all.bearmanWind, all.yetiFire], 4);
         all.jokerFire.addFusions([all.werewolfFire, all.magicalArcherFire, all.golemWater, all.howlWind], 4);
         all.nineTailedFoxWind.addFusions([all.harpyWind, all.amazonWind, all.highElementalFire, all.garudaWater], 4);
+        all.harpMagicianFire.addFusions([all.warbearWater, all.fairyWind, all.mysticWitch, all.vagabondFire], 4);
+        all.samuraiWater.addFusions([all.magicalArcherWind, all.elementalFire, all.martialArtistWater, all.infernoWater], 4);
+        all.paladinLight.addFusions([all.harpMagicianFire, all.samuraiWater, all.kungFuGirlWind, all.cowGirlLight], 5);
         all.pandaWarriorFire.addFusions([all.horusWater, all.kungFuGirlWind, all.succubusFire, all.vikingFire], 5);
         all.ifritDark.addFusions([all.vampireWind, all.succubusFire, all.undineWater, all.yetiDark], 5);
         all.valkyrjaWind.addFusions([all.sylphFire, all.undineWater, all.nineTailedFoxWind, all.werewolfWind], 5);
@@ -228,7 +243,7 @@ function neededFusion() {
 
     /*BUILD NEED COLUMN*/
     for (var row = 0; row < results.length; row++) {
-        if(wantCol[row][0] === "") results[row] = [""];
+        if (wantCol[row][0] === "") results[row] = [""];
         else results[row] = [monsterCol[row].needAmount];
     }
 
