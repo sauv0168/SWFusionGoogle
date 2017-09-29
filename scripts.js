@@ -124,7 +124,7 @@ function neededFusion() {
         all.infernoWater = new Monster("Purian", "Inferno", ATTRIBUTES.WATER);
         all.samuraiWater = new Monster("Kaz", "Samurai", ATTRIBUTES.WATER, 4);
         all.cowGirlLight = new Monster("Loren", "Cow Girl", ATTRIBUTES.LIGHT);
-        all.paladinLight = new Monster("Unknown", "Paladin", ATTRIBUTES.LIGHT, 5);
+        all.paladinLight = new Monster("Jeanne", "Paladin", ATTRIBUTES.LIGHT, 5);
         all.pandaWarriorFire = new Monster("Xiong Fei", "Panda Warrior", ATTRIBUTES.FIRE, 5)
         all.ifritDark = new Monster("Veromos", "Ifrit", ATTRIBUTES.DARK, 5);
         all.valkyrjaWind = new Monster("Katarina", "Valkyrja", ATTRIBUTES.WIND, 5);
